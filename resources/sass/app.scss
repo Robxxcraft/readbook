@@ -1,0 +1,95 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+$primary: #db1818;
+$secondary: #929292;
+$accordion-icon-color: white;
+$accordion-icon-active-color: white;
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(245, 245, 245);
+}
+.grid {
+    display: grid;
+}
+.grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.gap {
+    gap: 1rem;
+}
+.text-sm {
+    font-size: 0.78rem;
+}
+
+.two-lines {
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+a {
+    color: currentColor;
+    cursor: pointer;
+}
+.link, a {
+    text-decoration: none;
+}
+.link:hover {
+    text-decoration: underline solid #929292;
+}
+.link-danger:hover {
+    text-decoration: underline solid #db1818;
+}
+.brown {
+    background-color: brown !important;
+}
+.pinjam:hover {
+    background-color: white;
+    color: #db1818;
+}
+.title:hover {
+    text-decoration: underline;
+    color: #db1818;
+}
+.rounded-start-bottom {
+    border-bottom-left-radius: 6px;
+}
+.rounded-end-bottom {
+    border-bottom-right-radius: 6px;
+}
+.auth-nav{
+    background-color: whitesmoke;
+    color: rgb(201, 196, 190);
+    border-top: 4px solid rgb(201, 196, 190);
+    &:hover {
+        background-color: rgb(230, 230, 230);
+    }
+    &-active {
+        background-color: whitesmoke;
+        color: rgb(201, 196, 190);
+        border-top: 4px solid rgb(201, 196, 190);
+        background-color: white;
+    }
+}
+.h-200 {
+    height: 200px;
+}
+.avatar {
+    width: 24px;
+    height: 24px;
+    & .fa-user {
+        top: 20%;
+        left: 25%;
+    }
+}
