@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->date('tanggal_pinjam');
             $table->date('tanggal_kembali');
+            $table->date('tanggal_dikembalikan');
             $table->bigInteger('denda');
             $table->integer('kuantitas');
             $table->unsignedBigInteger('anggota_id');

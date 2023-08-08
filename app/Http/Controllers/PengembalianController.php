@@ -37,9 +37,14 @@ class PengembalianController extends Controller
             $denda += 5000;
         }
         $pengembalian = Pengembalian::create([
-            'tanggal_pengembalian' => date('Y-m-d'),
-            'denda' => $denda,
-            'peminjaman_id' => $peminjaman->id,
+            'tanggal_pinjam' => $peminjaman->tanggal_pinjam,
+            'tanggal_kembali' => $peminjaman->tanggal_kembali,
+            'tanggal_dikembalikan' => date('Y-m-d'),
+            'anggota_id' => Auth::guard('anggota')->user()->id,
+            'buku_id' => $peminjaman->buku_id,
+            'petugas_id' => $peminjaman->petugas_id,
+            'kuantitas' => $peminjaman->kuantitas,
+            'denda' => $denda
         ]);
 
         if ($pengembalian) {

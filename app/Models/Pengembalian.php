@@ -11,7 +11,7 @@ class Pengembalian extends Model
 
     protected $table = 'pengembalian';
 
-    protected $fillable = ['tanggal_pinjam', 'tanggal_kembali', 'anggota_id', 'buku_id', 'petugas_id', 'kuantitas', 'denda', 'peminjaman_id', 'petugas_id'];
+    protected $fillable = ['tanggal_pinjam', 'tanggal_kembali', 'tanggal_dikembalikan', 'anggota_id', 'buku_id', 'petugas_id', 'kuantitas', 'denda', 'peminjaman_id', 'petugas_id'];
 
     protected $casts = [
         'tanggal_pinjam' => 'datetime',
