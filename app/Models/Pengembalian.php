@@ -16,6 +16,7 @@ class Pengembalian extends Model
     protected $casts = [
         'tanggal_pinjam' => 'datetime',
         'tanggal_kembali' => 'datetime',
+        'tanggal_dikembalikan' => 'datetime',
     ];
 
     public function buku()

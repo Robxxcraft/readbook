@@ -47,7 +47,15 @@
                             </div>
                         </div>
                         <div class="end-0 top-0 me-3 mb-1 position-absolute text-end">
-                            <div>checklist</div>
+                            <div class="fw-semibold d-flex align-items-start">
+                                <div class="bg-success rounded-2 px-1 mt-3 d-inline-block">
+                                    <i class="text-white fa-solid fa-check pt-1 fs-5"></i>
+                                </div>
+                                <div class="ms-2 text-start">
+                                    <div class="mt-2">Dikembalikan pada</div>
+                                    <div class="text-success">{{$pengembalian->tanggal_dikembalikan->translatedFormat('d M Y')}}</div>
+                                </div>
+                            </div>
                         </div>
                         <div class="end-0 bottom-0 me-3 mb-1 position-absolute text-end">
                             <div class="ms-5 mb-3 d-flex fw-semibold">
