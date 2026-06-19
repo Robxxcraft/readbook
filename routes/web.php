@@ -10,6 +10,7 @@ use App\Http\Controllers\PetugasBukuController;
 use App\Http\Controllers\PetugasRakController;
 use App\Http\Controllers\RakController;
 use App\Http\Controllers\TagController;
+use App\Http\Controllers\PetugasPeminjamanController;
 use Illuminate\Support\Facades\Route;
 
 /*

@@ -17,7 +17,7 @@ class BukuFactory extends Factory
      */
     public function definition()
     {
-        $judul = fake()->text(60);
+        $judul = fake()->realText(60);
         return [
             'judul' => $judul,
             'slug' => Str::slug($judul),

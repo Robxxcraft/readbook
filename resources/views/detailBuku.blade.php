@@ -20,7 +20,14 @@
                 <div class="pe-5 ps-3 py-4">
                     <div class="mb-2 badge bg-primary">{{$buku->rak->nama_rak}}</div>
                     <div class="fw-semibold fs-5 mb-1">{{$buku->judul}}</div>
-                    <div class="text-secondary fw-semibold">{{$buku->pengarang}}</div>
+                    <div class="text-primary fw-semibold">{{$buku->pengarang}}</div>
+                    <div class="bg-white p-3 mt-2 rounded border">
+                        @if (isset($buku->deskripsi))
+                            <div class="text-secondary">"{{$buku->deskripsi}}"</div>
+                        @else 
+                            <div class="text-secondary">Tidak ada deskripsi</div>
+                        @endif
+                    </div>
                     <div class="row align-items-end mt-5">
                         <div class="col-4 border-start">
                             <div class="text-secondary">Jumlah</div>
@@ -38,7 +45,7 @@
                     <div class="fw-semibold texy-secondary mt-3">Tags</div>
                     <div id="tags" class="d-flex flex-wrap align-items-start mt-1">
                         @foreach ($buku->tag as $tag)
-                            <a href="/tag/{{$tag->slug}}" class="bg-primary rounded-1 shadow-sm fw-semibold text-white px-2 py-1 me-2 mb-2"><i class="fa-solid fa-tag"></i> {{strtolower($tag->nama)}}</a>
+                            <a href="/tag/{{$tag->slug}}" class="btn btn-primary rounded-1 shadow-sm fw-semibold text-white px-2 py-1 me-2 mb-2"><i class="fa-solid fa-tag"></i> {{strtolower($tag->nama)}}</a>
                         @endforeach
                     </div>
                     <div class="border-bottom pb-3 mt-5 d-flex justify-content-end">

@@ -38,23 +38,23 @@ class DatabaseSeeder extends Seeder
         //     $buku->tag()->attach($tag->id);
         // }
 
-        // \App\Models\Petugas::create([
-        //     'nama' => 'Petugas',
-        //     'email' => 'petugas@gmail.com',
-        //     'password' => Hash::make('petugas'),
-        //     'email_verified_at' => now(),
-        //     'jenis_kelamin' => 'P',
-        //     'alamat' => fake()->address(),
-        //     'telepon' => 8374078731,
-        // ]);
-        // \App\Models\Anggota::create([
-        //     'nama' => 'Anggota',
-        //     'email' => 'anggota@gmail.com',
-        //     'password' => Hash::make('anggota'),
-        //     'email_verified_at' => now(),
-        //     'jenis_kelamin' => 'L',
-        //     'alamat' => fake()->address(),
-        //     'telepon' => 8837462222,
-        // ]);
+        \App\Models\Petugas::create([
+            'nama' => 'Petugas',
+            'email' => 'petugas@gmail.com',
+            'password' => Hash::make('petugas'),
+            'email_verified_at' => now(),
+            'jenis_kelamin' => 'P',
+            'alamat' => fake()->address(),
+            'telepon' => 8374078731,
+        ]);
+        \App\Models\Anggota::create([
+            'nama' => 'Anggota',
+            'email' => 'anggota@gmail.com',
+            'password' => Hash::make('anggota'),
+            'email_verified_at' => now(),
+            'jenis_kelamin' => 'L',
+            'alamat' => fake()->address(),
+            'telepon' => 8837462222,
+        ]);
     }
 }

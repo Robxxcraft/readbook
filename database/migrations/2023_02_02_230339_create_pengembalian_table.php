@@ -20,14 +20,14 @@ return new class extends Migration
             $table->date('tanggal_dikembalikan');
             $table->bigInteger('denda');
             $table->integer('kuantitas');
-            $table->unsignedBigInteger('anggota_id');
             $table->unsignedBigInteger('buku_id');
-            $table->unsignedBigInteger('petugas_id');
+            $table->unsignedBigInteger('anggota_id')->nullable();
+            $table->unsignedBigInteger('petugas_id')->nullable();
             $table->timestamps();
 
-            $table->foreign('anggota_id')->nullable()->on('anggota')->references('id')->onDelete('set null');
             $table->foreign('buku_id')->on('buku')->references('id')->onDelete('cascade');
-            $table->foreign('petugas_id')->nullable()->on('petugas')->references('id')->onDelete('set null');
+            $table->foreign('anggota_id')->on('anggota')->references('id')->onDelete('set null');
+            $table->foreign('petugas_id')->on('petugas')->references('id')->onDelete('set null');
         });
     }
 

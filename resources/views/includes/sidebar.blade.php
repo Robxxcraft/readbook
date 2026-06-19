@@ -11,7 +11,7 @@
     <div class="text-primary fw-bold mt-4 mb-2">Tags</div>
     <div class="d-flex flex-wrap align-items-start border-bottom pb-4">
         @foreach ($tags as $tag)
-            <a href="/tag/{{$tag->slug}}" class="bg-primary rounded-1 shadow-sm fw-semibold text-white px-2 py-1 me-2 mb-2"><i class="fa-solid fa-tag"></i> {{strtolower($tag->nama)}}</a>
+            <a href="/tag/{{$tag->slug}}" class="btn btn-primary rounded-1 shadow-sm fw-semibold text-white px-2 py-1 me-2 mb-2"><i class="fa-solid fa-tag"></i> {{strtolower($tag->nama)}}</a>
         @endforeach
     </div>
 </div>
